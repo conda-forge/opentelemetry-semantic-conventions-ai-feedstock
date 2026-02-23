@@ -17,10 +17,12 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
+    - opentelemetry-sdk >=1.38.0,<2
+    - opentelemetry-semantic-conventions >=0.59b0
 
 test:
   imports:
